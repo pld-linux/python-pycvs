@@ -13,7 +13,6 @@ Source0:	http://dl.sourceforge.net/pycvs/%{module}-%{version}.tar.gz
 URL:		http://pycvs.sourceforge.net/
 %pyrequires_eq	python-modules
 BuildRequires:	python-devel >= 1:2.3
-BuildRequires:	rpm-pythonprov
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
