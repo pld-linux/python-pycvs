@@ -1,5 +1,5 @@
 
-%define         module	pycvs
+%define		module	pycvs
 
 Summary:	CVS support for Python
 Summary(pl):	Obs³uga CVSu dla Pythona
