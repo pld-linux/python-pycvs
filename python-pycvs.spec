@@ -5,7 +5,7 @@ Summary:	CVS support for Python
 Summary(pl):	Obs³uga CVSu dla Pythona
 Name:		python-%{module}
 Version:	0.1
-Release:	1
+Release:	2
 License:	GNU
 Group:		Development/Languages/Python
 Source0:	http://dl.sourceforge.net/pycvs/%{module}-%{version}.tar.gz
