@@ -1,9 +1,9 @@
 %include	/usr/lib/rpm/macros.python
 
-%define         module pycvs
+%define         module	pycvs
 
-Summary:	CVS support for python
-Summary(pl):	Obs³uga CVSu dla pythona
+Summary:	CVS support for Python
+Summary(pl):	Obs³uga CVSu dla Pythona
 Name:		python-%{module}
 Version:	0.1
 Release:	1
@@ -18,12 +18,12 @@ BuildRequires:	rpm-pythonprov
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-pyCVS is a python library/module for the CVS (Concurrent Versions
+pyCVS is a Python library/module for the CVS (Concurrent Versions
 System) protocol. It supports asynchronous and synchronous handling of
 CVS servers.
 
 %description -l pl
-pyCVS jest bibliotek±/modu³em pythona do obs³ugi protoko³u CVS
+pyCVS jest bibliotek±/modu³em Pythona do obs³ugi protoko³u CVS
 (Concurrent Versions System). Obs³uguje asynchroniczn± i synchroniczn±
 obs³ugê serwerów CVS.
 
