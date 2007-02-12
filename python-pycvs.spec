@@ -2,7 +2,7 @@
 %define		module	pycvs
 
 Summary:	CVS support for Python
-Summary(pl):	Obs≥uga CVSu dla Pythona
+Summary(pl.UTF-8):   Obs≈Çuga CVSu dla Pythona
 Name:		python-%{module}
 Version:	0.1
 Release:	3
@@ -20,10 +20,10 @@ pyCVS is a Python library/module for the CVS (Concurrent Versions
 System) protocol. It supports asynchronous and synchronous handling of
 CVS servers.
 
-%description -l pl
-pyCVS jest bibliotek±/modu≥em Pythona do obs≥ugi protoko≥u CVS
-(Concurrent Versions System). Obs≥uguje asynchroniczn± i synchroniczn±
-obs≥ugÍ serwerÛw CVS.
+%description -l pl.UTF-8
+pyCVS jest bibliotekƒÖ/modu≈Çem Pythona do obs≈Çugi protoko≈Çu CVS
+(Concurrent Versions System). Obs≈Çuguje asynchronicznƒÖ i synchronicznƒÖ
+obs≈Çugƒô serwer√≥w CVS.
 
 %prep
 %setup -q -n %{module}-%{version}
