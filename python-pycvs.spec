@@ -1,11 +1,9 @@
-
 %define		module	pycvs
-
 Summary:	CVS support for Python
 Summary(pl.UTF-8):	Obsługa CVSu dla Pythona
 Name:		python-%{module}
 Version:	0.1
-Release:	3
+Release:	4
 License:	GNU
 Group:		Development/Languages/Python
 Source0:	http://dl.sourceforge.net/pycvs/%{module}-%{version}.tar.gz
@@ -13,6 +11,7 @@ Source0:	http://dl.sourceforge.net/pycvs/%{module}-%{version}.tar.gz
 URL:		http://pycvs.sourceforge.net/
 %pyrequires_eq	python-modules
 BuildRequires:	python-devel >= 1:2.3
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -29,14 +28,13 @@ obsługę serwerów CVS.
 %setup -q -n %{module}-%{version}
 
 %build
-python -c "import compiler;compiler.compileFile('library/pycvs.py')"
+%{__python} -c "import compiler;compiler.compileFile('library/pycvs.py')"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{py_sitedir}
-install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+install -d $RPM_BUILD_ROOT{%{py_sitescriptdir},%{_examplesdir}/%{name}-%{version}}
 install clients/client.py $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
-install library/pycvs.pyc $RPM_BUILD_ROOT%{py_sitedir}
+install library/pycvs.pyc $RPM_BUILD_ROOT%{py_sitescriptdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -44,6 +42,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS README
-%{py_sitedir}/*.py[co]
-%dir %{_examplesdir}/%{name}-%{version}
-%{_examplesdir}/%{name}-%{version}/*
+%{py_sitescriptdir}/*.py[co]
+%{_examplesdir}/%{name}-%{version}
